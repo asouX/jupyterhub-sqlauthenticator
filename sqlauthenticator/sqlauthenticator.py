@@ -25,7 +25,7 @@ class SQLAuthenticator(Authenticator):
         try:
             with conn.cursor() as cursor:
                 user = conn.escape(data['username'])
-                sql = 'SELECT `password` FROM `users` WHERE `username` = {}'
+                sql = 'SELECT `password` FROM `' + os.getenv('MYSQL_TABLE') + '` WHERE `username` = {}'
                 sql_formatted = sql.format(user)
 
                 cursor.execute(sql_formatted)

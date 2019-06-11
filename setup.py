@@ -5,10 +5,10 @@ from setuptools import setup
 setup(name='sqlauthenticator',
       version='1.0',
       description='SQL Authenticator for Jupyterhub',
-      author='Benjamin Congdon',
+      author='xuchao',
       license='MIT',
-      author_email='bcongdo2@illinois.edu',
-      url='https://github.com/bcongdon/jupyterhub-sqlauthenticator',
+      author_email='g-xuchao@tedu.cn',
+      url='https://github.com/asouX/jupyterhub-sqlauthenticator',
       packages=['sqlauthenticator'],
       install_requires=[
         'passlib',

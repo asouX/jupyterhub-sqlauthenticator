@@ -8,8 +8,7 @@ import os
 class SQLAuthenticator(Authenticator):
     def _verify_password_hash(self, hash_, password):
         try:
-            #return pbkdf2_sha256.verify(password, hash_)
-			return password == hash_
+            return password == hash_
         except ValueError:
             return False
 
